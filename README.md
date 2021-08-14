@@ -8,6 +8,8 @@ Passwords/Passphrases are consider as a user's secret. In general, if people cho
 
 SSH key login/ Digital Signature with challenge and respond login in the other hand is not flawed as all things are considered as randomly generated. This ensures that on server side there's no secrets or confidential data involved. Not to mention, such login mechanism has a higher login success rate compare to passwords/passphrases.
 
+MySQL(Current database) or any SQL structured database requires the use of passwords to login into the created db account. Anything that involves with CRUD in databases will still require passwords to login. However, to lock or unlock your database account, SSH key login/Digital Signature with challenge and respond login was used.
+
 ===================
 
 ===Problem of RSA=====
