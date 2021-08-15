@@ -2,6 +2,8 @@
 
 This README will describe how the cryptography element of this confidential database hosting works
 
+(All credits goes to libsodium authors and contributors for proposing the idea of sealed box)
+
 ====Login Mechanism====
 
 Passwords/Passphrases are consider as a user's secret. In general, if people choose to use passwords as a login mechanism, it's destined to be flawed as both user and developer might not know what they are doing. Passphrases on the other hand might not have such problems, however, it's not that doable to differentiate whether the given data is password or passphrases.
