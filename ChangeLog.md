@@ -21,4 +21,4 @@
 4. Shorter code
 5. Highly reduced bugs
 6. Updated ETLS,Sealed Session
-7. Change the ambiguous messages in ETLS and Sealed Session to less ambiguous
+7. Change the ambiguous messages to less ambiguous in ETLS and Sealed Session
