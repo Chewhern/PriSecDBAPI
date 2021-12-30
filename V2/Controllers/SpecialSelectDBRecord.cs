@@ -257,6 +257,15 @@ namespace PriSecDBAPI.Controllers
                                     ClientMySQLGeneralQuery.Connection = ClientMySQLDB.ClientMySQLConnection;
                                     ClientMySQLGeneralQuery.Prepare();
                                     ClientDataReader = ClientMySQLGeneralQuery.ExecuteReader();
+                                    //Potential unsolvable issue which could lead to DDOS attack
+                                    //The code here involves with both counting row count and retrieving records(if exists)
+                                    //Ideally, in all mysql databases, this is not an issue as the database and the server were
+                                    //used by only certain types of users
+                                    //through the use of LIMIT and OFFSET key words in MySQL
+                                    //The developer's MySQL query can also be treated as nuclear wastes
+                                    //in such cases, if they don't use the keywords of LIMIT and OFFSET
+                                    //it could be used intentionally or unintentionally as a way to overburden the server.
+                                    //The likelihood that it can happen is unknown.. Please do take note of these comments.                                    
                                     while (ClientDataReader.Read())
                                     {
                                         DBCount += 1;
