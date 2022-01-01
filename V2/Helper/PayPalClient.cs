@@ -14,7 +14,8 @@ namespace PriSecDBAPI.Helper
     {
         public static PayPalEnvironment environment()
         {
-            return new SandboxEnvironment("{PayPal Sandbox/Live API credentials}", "{PayPal Sandbox/Live API credentials}");
+            //return new LiveEnvironment("{PayPal Live API credentials}","{PayPal Live API credentials}"); Or
+            return new SandboxEnvironment("{PayPal Sandbox API credentials}", "{PayPal Sandbox API credentials}");
         }
 
         public static HttpClient client()
